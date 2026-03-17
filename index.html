@@ -1,15 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="tiktok-domain-verification" content="cWxKKfrLj5XPNPKLYyystrhGCkbgoPZg"/>
-  <meta charset="UTF-8">
-  <title>AI Shorts Factory</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="tiktok-developers-site-verification" content="aisx8CIbwazZ6kPAn2QTNrwI4ywXrluZ" />
+  <title>PhiloShorts — AI-Powered Philosophy Content</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f0f0f; color: #f0f0f0; }
+    header { background: #1a1a2e; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2a2a4a; }
+    header .logo { font-size: 22px; font-weight: 700; color: #a78bfa; letter-spacing: -0.5px; }
+    header nav a { color: #ccc; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    header nav a:hover { color: #fff; }
+    .hero { text-align: center; padding: 100px 24px 80px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+    .hero h1 { font-size: 48px; font-weight: 800; line-height: 1.15; margin-bottom: 20px; background: linear-gradient(90deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 18px; color: #9ca3af; max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
+    .badge { display: inline-block; background: #a78bfa22; border: 1px solid #a78bfa55; color: #a78bfa; padding: 6px 16px; border-radius: 999px; font-size: 13px; margin-bottom: 24px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; padding: 80px 24px; }
+    .card { background: #1e1e2e; border: 1px solid #2a2a4a; border-radius: 16px; padding: 28px; }
+    .card .icon { font-size: 32px; margin-bottom: 16px; }
+    .card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: #9ca3af; line-height: 1.6; }
+    .how { background: #1a1a2e; padding: 80px 24px; text-align: center; }
+    .how h2 { font-size: 32px; font-weight: 700; margin-bottom: 48px; }
+    .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 800px; margin: 0 auto; }
+    .step { background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px 28px; width: 220px; }
+    .step .num { font-size: 28px; font-weight: 800; color: #a78bfa; margin-bottom: 8px; }
+    .step p { font-size: 13px; color: #9ca3af; }
+    footer { text-align: center; padding: 40px 24px; border-top: 1px solid #2a2a4a; }
+    footer a { color: #a78bfa; text-decoration: none; margin: 0 16px; font-size: 14px; }
+    footer p { color: #4b5563; font-size: 13px; margin-top: 16px; }
+  </style>
 </head>
 <body>
-  <h1>AI Shorts Factory</h1>
-  <h2>Privacy Policy</h2>
-  <p>This app publishes philosophy video content to TikTok automatically. No personal data is collected.</p>
-  <h2>Terms of Service</h2>
-  <p>By using this service you agree to TikTok's Terms of Service. Content is AI-generated for educational purposes.</p>
+  <header>
+    <div class="logo">PhiloShorts</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="badge">AI-Powered Content Automation</div>
+    <h1>Philosophy Wisdom,<br/>Delivered as Short Videos</h1>
+    <p>PhiloShorts automatically transforms trending philosophy topics into engaging short-form video content and publishes them to TikTok — fully automated, ethically built.</p>
+  </div>
+
+  <div class="features">
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h3>AI Video Generation</h3>
+      <p>Our system uses advanced AI to script, narrate, and produce short-form philosophy videos — no manual editing required.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔊</div>
+      <h3>Text-to-Speech Narration</h3>
+      <p>High-quality AI voice narration brings philosophical ideas to life with natural, engaging delivery.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>TikTok Auto-Publishing</h3>
+      <p>Videos are automatically optimized for TikTok's vertical format and published via the official TikTok Content Posting API.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>Educational Content</h3>
+      <p>All content focuses on philosophy, wisdom, and critical thinking — designed to educate and inspire audiences worldwide.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Privacy First</h3>
+      <p>We do not collect, store, or sell any personal data from viewers or users. Our service operates on a content-only basis.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Daily Publishing</h3>
+      <p>Fresh philosophy content published daily, keeping audiences engaged with timeless wisdom delivered in modern formats.</p>
+    </div>
+  </div>
+
+  <div class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><p>AI selects trending philosophy topics</p></div>
+      <div class="step"><div class="num">02</div><p>Script is written and narrated by AI voice</p></div>
+      <div class="step"><div class="num">03</div><p>Video is rendered with subtitles & visuals</p></div>
+      <div class="step"><div class="num">04</div><p>Published to TikTok automatically</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <p>© 2026 PhiloShorts. All rights reserved. Content is AI-generated for educational purposes.</p>
+  </footer>
 </body>
 </html>
