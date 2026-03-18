@@ -199,11 +199,11 @@
   </footer>
 
   <script>
+    // Backend URL — Railway deploy sonrası güncelle
+    const BACKEND_URL = 'REPLACE_WITH_RAILWAY_URL';
     function handleConnect(e) {
       e.preventDefault();
-      // In production this would redirect to TikTok OAuth
-      // For demo: redirect to dashboard
-      window.location.href = '/dashboard.html';
+      window.location.href = BACKEND_URL + '/api/auth/tiktok';
     }
   </script>
 </body>
