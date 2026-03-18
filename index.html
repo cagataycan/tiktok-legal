@@ -4,97 +4,207 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="tiktok-developers-site-verification" content="aisx8CIbwazZ6kPAn2QTNrwI4ywXrluZ" />
-  <title>PhiloShorts — AI-Powered Philosophy Content</title>
+  <title>PhiloShorts — AI Philosophy Content for TikTok Creators</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f0f0f; color: #f0f0f0; }
-    header { background: #1a1a2e; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2a2a4a; }
+    header { background: #1a1a2e; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2a2a4a; position: sticky; top: 0; z-index: 100; }
     header .logo { font-size: 22px; font-weight: 700; color: #a78bfa; letter-spacing: -0.5px; }
     header nav a { color: #ccc; text-decoration: none; margin-left: 24px; font-size: 14px; }
     header nav a:hover { color: #fff; }
-    .hero { text-align: center; padding: 100px 24px 80px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
-    .hero h1 { font-size: 48px; font-weight: 800; line-height: 1.15; margin-bottom: 20px; background: linear-gradient(90deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { font-size: 18px; color: #9ca3af; max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
+    .btn-primary { background: #a78bfa; color: #fff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 16px; }
+    .btn-primary:hover { background: #9061f9; color: #fff; }
+    .btn-outline { border: 1px solid #a78bfa; color: #a78bfa; padding: 9px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 8px; }
+    .btn-outline:hover { background: #a78bfa22; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 120px 24px 100px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
     .badge { display: inline-block; background: #a78bfa22; border: 1px solid #a78bfa55; color: #a78bfa; padding: 6px 16px; border-radius: 999px; font-size: 13px; margin-bottom: 24px; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; padding: 80px 24px; }
+    .hero h1 { font-size: 52px; font-weight: 800; line-height: 1.1; margin-bottom: 24px; background: linear-gradient(90deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 19px; color: #9ca3af; max-width: 620px; margin: 0 auto 48px; line-height: 1.7; }
+    .hero-cta { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-hero { display: inline-flex; align-items: center; gap: 10px; background: #a78bfa; color: #fff; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 16px; }
+    .btn-hero:hover { background: #9061f9; }
+    .btn-hero-outline { display: inline-flex; align-items: center; gap: 10px; border: 2px solid #a78bfa; color: #a78bfa; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 16px; }
+    .btn-hero-outline:hover { background: #a78bfa22; }
+    .tiktok-icon { width: 22px; height: 22px; }
+
+    /* Stats */
+    .stats { display: flex; justify-content: center; gap: 64px; padding: 48px 24px; background: #0f0f1a; border-top: 1px solid #1e1e3a; border-bottom: 1px solid #1e1e3a; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 36px; font-weight: 800; color: #a78bfa; }
+    .stat .label { font-size: 13px; color: #6b7280; margin-top: 4px; }
+
+    /* How it works */
+    .section { padding: 80px 24px; max-width: 1000px; margin: 0 auto; }
+    .section h2 { font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px; }
+    .section .sub { text-align: center; color: #9ca3af; font-size: 16px; max-width: 520px; margin: 0 auto 56px; line-height: 1.6; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .step { background: #1e1e2e; border: 1px solid #2a2a4a; border-radius: 16px; padding: 28px 24px; text-align: center; position: relative; }
+    .step .num { width: 48px; height: 48px; background: linear-gradient(135deg, #a78bfa, #60a5fa); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; margin: 0 auto 16px; }
+    .step h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .step p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+    .step .arrow { position: absolute; right: -16px; top: 50%; transform: translateY(-50%); font-size: 24px; color: #a78bfa; z-index: 1; }
+
+    /* Features */
+    .features-section { background: #0f0f1a; padding: 80px 24px; }
+    .features-section h2 { font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px; }
+    .features-section .sub { text-align: center; color: #9ca3af; font-size: 16px; max-width: 520px; margin: 0 auto 56px; line-height: 1.6; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
     .card { background: #1e1e2e; border: 1px solid #2a2a4a; border-radius: 16px; padding: 28px; }
     .card .icon { font-size: 32px; margin-bottom: 16px; }
-    .card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
     .card p { font-size: 14px; color: #9ca3af; line-height: 1.6; }
-    .how { background: #1a1a2e; padding: 80px 24px; text-align: center; }
-    .how h2 { font-size: 32px; font-weight: 700; margin-bottom: 48px; }
-    .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 800px; margin: 0 auto; }
-    .step { background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px 28px; width: 220px; }
-    .step .num { font-size: 28px; font-weight: 800; color: #a78bfa; margin-bottom: 8px; }
-    .step p { font-size: 13px; color: #9ca3af; }
-    footer { text-align: center; padding: 40px 24px; border-top: 1px solid #2a2a4a; }
+
+    /* Creator CTA */
+    .creator-cta { background: linear-gradient(135deg, #1a1a2e, #0f3460); text-align: center; padding: 100px 24px; }
+    .creator-cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
+    .creator-cta p { font-size: 17px; color: #9ca3af; max-width: 520px; margin: 0 auto 40px; line-height: 1.6; }
+
+    /* TikTok connect section */
+    .connect-box { max-width: 480px; margin: 0 auto; background: #1e1e2e; border: 1px solid #2a2a4a; border-radius: 20px; padding: 40px; text-align: center; }
+    .connect-box h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .connect-box p { font-size: 14px; color: #9ca3af; margin-bottom: 28px; line-height: 1.6; }
+    .btn-tiktok { display: inline-flex; align-items: center; gap: 12px; background: #010101; color: #fff; padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; border: 2px solid #333; width: 100%; justify-content: center; }
+    .btn-tiktok:hover { background: #1a1a1a; border-color: #666; }
+    .connect-box .note { font-size: 12px; color: #4b5563; margin-top: 20px; }
+
+    footer { text-align: center; padding: 48px 24px; border-top: 1px solid #2a2a4a; }
     footer a { color: #a78bfa; text-decoration: none; margin: 0 16px; font-size: 14px; }
     footer p { color: #4b5563; font-size: 13px; margin-top: 16px; }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">PhiloShorts</div>
     <nav>
       <a href="/">Home</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Service</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/dashboard.html" class="btn-outline">Sign In</a>
+      <a href="#connect" class="btn-primary">Get Started Free</a>
     </nav>
   </header>
 
+  <!-- Hero -->
   <div class="hero">
-    <div class="badge">AI-Powered Content Automation</div>
-    <h1>Philosophy Wisdom,<br/>Delivered as Short Videos</h1>
-    <p>PhiloShorts automatically transforms trending philosophy topics into engaging short-form video content and publishes them to TikTok — fully automated, ethically built.</p>
-  </div>
-
-  <div class="features">
-    <div class="card">
-      <div class="icon">🎬</div>
-      <h3>AI Video Generation</h3>
-      <p>Our system uses advanced AI to script, narrate, and produce short-form philosophy videos — no manual editing required.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🔊</div>
-      <h3>Text-to-Speech Narration</h3>
-      <p>High-quality AI voice narration brings philosophical ideas to life with natural, engaging delivery.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📱</div>
-      <h3>TikTok Auto-Publishing</h3>
-      <p>Videos are automatically optimized for TikTok's vertical format and published via the official TikTok Content Posting API.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🌍</div>
-      <h3>Educational Content</h3>
-      <p>All content focuses on philosophy, wisdom, and critical thinking — designed to educate and inspire audiences worldwide.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🔒</div>
-      <h3>Privacy First</h3>
-      <p>We do not collect, store, or sell any personal data from viewers or users. Our service operates on a content-only basis.</p>
-    </div>
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>Daily Publishing</h3>
-      <p>Fresh philosophy content published daily, keeping audiences engaged with timeless wisdom delivered in modern formats.</p>
+    <div class="badge">Free for Content Creators</div>
+    <h1>Grow Your TikTok with<br/>AI Philosophy Content</h1>
+    <p>Connect your TikTok account and let PhiloShorts automatically generate and publish daily AI-powered philosophy videos — sourced from real thinkers, built for the modern creator.</p>
+    <div class="hero-cta">
+      <a href="#connect" class="btn-hero">
+        <svg class="tiktok-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.28 6.28 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.74a4.87 4.87 0 01-1-.05z"/></svg>
+        Connect with TikTok
+      </a>
+      <a href="#how-it-works" class="btn-hero-outline">See how it works</a>
     </div>
   </div>
 
-  <div class="how">
-    <h2>How It Works</h2>
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat"><div class="num">25+</div><div class="label">Philosophers covered</div></div>
+    <div class="stat"><div class="num">167+</div><div class="label">Unique quotes & topics</div></div>
+    <div class="stat"><div class="num">Daily</div><div class="label">Auto-published videos</div></div>
+    <div class="stat"><div class="num">Free</div><div class="label">No credit card needed</div></div>
+  </div>
+
+  <!-- How it works -->
+  <div class="section" id="how-it-works">
+    <h2>How PhiloShorts Works</h2>
+    <p class="sub">Connect your TikTok account once — our AI handles everything else. No editing, no scripting, no scheduling.</p>
     <div class="steps">
-      <div class="step"><div class="num">01</div><p>AI selects trending philosophy topics</p></div>
-      <div class="step"><div class="num">02</div><p>Script is written and narrated by AI voice</p></div>
-      <div class="step"><div class="num">03</div><p>Video is rendered with subtitles & visuals</p></div>
-      <div class="step"><div class="num">04</div><p>Published to TikTok automatically</p></div>
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Create Account</h3>
+        <p>Sign up free and connect your TikTok account via secure OAuth 2.0</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>AI Generates Content</h3>
+        <p>Our system writes scripts from real philosopher quotes, records AI narration, and renders vertical videos</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Auto-Published Daily</h3>
+        <p>Videos are published to your TikTok account every day via the official TikTok Content Posting API</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Grow Your Audience</h3>
+        <p>Consistent, high-quality philosophy content keeps your followers engaged</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="features-section">
+    <h2>Built for Creators</h2>
+    <p class="sub">Every feature is designed to save time and maximize your reach on TikTok.</p>
+    <div class="features">
+      <div class="card">
+        <div class="icon">🎬</div>
+        <h3>AI Video Generation</h3>
+        <p>Scripts written from verified philosopher quotes, with AI narration and auto-synced subtitles. Ready-to-publish vertical format.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔗</div>
+        <h3>Secure TikTok OAuth</h3>
+        <p>We use TikTok's official Content Posting API. You authorize access via OAuth 2.0 — we never store your TikTok password.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Automated Scheduling</h3>
+        <p>Content is published daily at peak engagement times. No manual uploads, no missed days.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏛️</div>
+        <h3>25+ Philosophers</h3>
+        <p>Marcus Aurelius, Nietzsche, Camus, Aristotle, and 21 more — 167 unique verified quotes in the content library.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>We only request the <code>video.publish</code> scope. We never read your private data, messages, or follower lists.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Zero Effort Required</h3>
+        <p>Connect once and forget. PhiloShorts runs 100% automatically — no daily input from you needed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connect CTA -->
+  <div class="creator-cta" id="connect">
+    <h2>Start Publishing Today</h2>
+    <p>Connect your TikTok account and get your first AI philosophy video published within 24 hours.</p>
+    <div class="connect-box">
+      <h3>Connect Your TikTok Account</h3>
+      <p>We'll publish philosophy content to your TikTok account automatically. You can disconnect anytime.</p>
+      <a href="/auth/tiktok" class="btn-tiktok" onclick="handleConnect(event)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.28 6.28 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.74a4.87 4.87 0 01-1-.05z"/></svg>
+        Continue with TikTok
+      </a>
+      <p class="note">By connecting, you agree to our <a href="/terms.html" style="color:#a78bfa">Terms of Service</a> and <a href="/privacy.html" style="color:#a78bfa">Privacy Policy</a>.<br/>We only request video.publish permission.</p>
     </div>
   </div>
 
   <footer>
     <a href="/privacy.html">Privacy Policy</a>
     <a href="/terms.html">Terms of Service</a>
+    <a href="mailto:support@philoshorts.app">Contact</a>
     <p>© 2026 PhiloShorts. All rights reserved. Content is AI-generated for educational purposes.</p>
   </footer>
+
+  <script>
+    // Backend URL — Railway deploy sonrası güncelle
+    const BACKEND_URL = 'https://tiktok-legal-production.up.railway.app';
+    function handleConnect(e) {
+      e.preventDefault();
+      window.location.href = BACKEND_URL + '/api/auth/tiktok';
+    }
+  </script>
 </body>
 </html>
