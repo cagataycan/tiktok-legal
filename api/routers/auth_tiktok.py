@@ -36,7 +36,7 @@ async def tiktok_auth_start():
         f"{_TT_AUTH_URL}"
         f"?client_key={settings.tiktok_client_key}"
         f"&response_type=code"
-        f"&scope=user.info.basic,video.upload"
+        f"&scope=user.info.basic,video.publish"
         f"&redirect_uri={settings.tiktok_redirect_uri}"
     )
     return RedirectResponse(url)
