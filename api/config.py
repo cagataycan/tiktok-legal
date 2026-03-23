@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     supabase_service_key: str = ""
 
     # Frontend URL (OAuth sonrası yönlendirme)
-    frontend_url: str = "https://jolly-crepe-67cd79.netlify.app"
+    frontend_url: str = "https://cagataycan.github.io/tiktok-legal"
 
     # Storage
     storage_dir: str = "storage"
