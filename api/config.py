@@ -25,6 +25,11 @@ class Settings(BaseSettings):
     tiktok_refresh_token: str = ""
     tiktok_redirect_uri: str = ""   # Örn: https://your-backend.railway.app/api/auth/tiktok/callback
 
+    # Twitter/X
+    twitter_client_id: str = ""
+    twitter_client_secret: str = ""
+    twitter_redirect_uri: str = ""  # Örn: https://your-backend.railway.app/api/auth/twitter/callback
+
     # Supabase
     supabase_url: str = ""
     supabase_service_key: str = ""
